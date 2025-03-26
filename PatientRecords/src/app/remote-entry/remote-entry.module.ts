@@ -1,9 +1,19 @@
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { RemoteEntryComponent } from './remote-entry.component';
-import { appRoutes } from '../app.routes';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: RemoteEntryComponent,
+  },
+];
 
 @NgModule({
-  imports: [RouterModule.forChild(appRoutes),RemoteEntryComponent], // Import the routes
+  imports: [
+    RouterModule.forChild(routes),
+    RemoteEntryComponent, // Import the standalone component here
+  ],
+  exports: [RouterModule],
 })
 export class RemoteEntryModule {}

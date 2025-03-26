@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-remote-entry',
+  selector: 'app-patient-records',
   standalone: true,
   imports: [],
   templateUrl: './remote-entry.component.html',

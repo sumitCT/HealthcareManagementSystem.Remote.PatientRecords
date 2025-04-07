@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RemoteEntryComponent } from './remote-entry.component';
+import { PatientComponent } from './patient.component';
 
-describe('RemoteEntryComponent', () => {
-  let component: RemoteEntryComponent;
-  let fixture: ComponentFixture<RemoteEntryComponent>;
+describe('PatientComponent', () => {
+  let component: PatientComponent;
+  let fixture: ComponentFixture<PatientComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RemoteEntryComponent]
+      imports: [PatientComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(RemoteEntryComponent);
+    fixture = TestBed.createComponent(PatientComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -2,10 +2,10 @@ const { shareAll, withModuleFederationPlugin } = require('@angular-architects/mo
 
 module.exports = withModuleFederationPlugin({
 
-  name: 'PatientRecords',
+  name: 'demographics',
 
   exposes: {
-    './Routes': './src/app/app.routes.ts',
+    './Routes': './projects/demographics/src/app/app.routes.ts'
   },
 
   shared: {

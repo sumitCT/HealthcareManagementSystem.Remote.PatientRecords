@@ -1,0 +1,7 @@
+{
+  "remoteName": "patient-records",
+  "exposedModule": "./Routes",
+  "displayName": "Patient Records",
+  "routePath": "patients",
+  "version": "1.0.0"
+}

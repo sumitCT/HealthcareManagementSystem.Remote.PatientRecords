@@ -1,0 +1,7 @@
+{
+  "remoteName": "demographics",
+  "exposedModule": "./Routes",
+  "displayName": "Demographics",
+  "routePath": "demographics",
+  "version": "1.0.0"
+}

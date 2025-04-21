@@ -1,1 +1,71 @@
-<p>mrn-details works!</p>
+<div class="container">
+  <mat-card class="mat-elevation-z8">
+    <mat-card-header>
+      <mat-card-title>Patient MRN Details</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+
+      <div class="table-container">
+        <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+          <!-- ID Column -->
+          <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> ID </th>
+            <td mat-cell *matCellDef="let patient"> {{patient.id}} </td>
+          </ng-container>
+
+          <!-- MRN Column -->
+          <ng-container matColumnDef="mrn">
+            <th mat-header-cell *matHeaderCellDef> MRN </th>
+            <td mat-cell *matCellDef="let patient"> {{patient.mrn}} </td>
+          </ng-container>
+
+          <!-- First Name Column -->
+          <ng-container matColumnDef="firstName">
+            <th mat-header-cell *matHeaderCellDef> First Name </th>
+            <td mat-cell *matCellDef="let patient"> {{patient.firstName}} </td>
+          </ng-container>
+
+          <!-- Last Name Column -->
+          <ng-container matColumnDef="lastName">
+            <th mat-header-cell *matHeaderCellDef> Last Name </th>
+            <td mat-cell *matCellDef="let patient"> {{patient.lastName}} </td>
+          </ng-container>
+
+          <!-- DOB Column -->
+          <ng-container matColumnDef="dob">
+            <th mat-header-cell *matHeaderCellDef> Date of Birth </th>
+            <td mat-cell *matCellDef="let patient"> {{patient.dob}} </td>
+          </ng-container>
+
+          <!-- Gender Column -->
+          <ng-container matColumnDef="gender">
+            <th mat-header-cell *matHeaderCellDef> Gender </th>
+            <td mat-cell *matCellDef="let patient"> {{patient.gender}} </td>
+          </ng-container>
+
+          <!-- Visit Date Column -->
+          <ng-container matColumnDef="visitDate">
+            <th mat-header-cell *matHeaderCellDef> Visit Date </th>
+            <td mat-cell *matCellDef="let patient"> {{patient.visitDate}} </td>
+          </ng-container>
+
+          <!-- Department Column -->
+          <ng-container matColumnDef="department">
+            <th mat-header-cell *matHeaderCellDef> Department </th>
+            <td mat-cell *matCellDef="let patient"> {{patient.department}} </td>
+          </ng-container>
+
+          <!-- Status Column -->
+          <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef> Status </th>
+            <td mat-cell *matCellDef="let patient"> {{patient.status}} </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
